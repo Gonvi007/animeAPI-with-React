@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Modal from 'react-bootstrap/Modal';
-import "./Anime.scss";
+import "../../index.scss";
 
 const Anime = ({id, name, src, nameOriginal, anio, director, description}) =>{
   const [show, setShow] = useState(false);

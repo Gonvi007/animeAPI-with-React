@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react'
 import { Anime } from '../Anime/Anime';
-import './ListAnime.scss';
+import '../../index.scss';
 
 const ListAnime = () => {
   const [animes, setAnimes] = useState([]);

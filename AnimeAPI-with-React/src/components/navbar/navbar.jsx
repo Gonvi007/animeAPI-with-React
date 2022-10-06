@@ -6,7 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import vite from '../../assets/vite.svg'
-import './navbar.scss'
+import '../../index.scss'
 
 function NavBar() {
 
