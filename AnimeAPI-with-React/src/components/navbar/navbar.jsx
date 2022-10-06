@@ -5,15 +5,18 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import vite from '../../assets/vite.svg'
 import './navbar.scss'
 
 function NavBar() {
+
+
 
   return (
     <div className="NavBar">
 <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#"><img src="../assets/made in abyss 01.jpg"></img></Navbar.Brand>
+        <Navbar.Brand href="#"><img  src={vite}></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -21,21 +24,18 @@ function NavBar() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Animes</Nav.Link>
-            <Nav.Link href="#action2">Mangas</Nav.Link>
-            <NavDropdown title="Top" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Animes</NavDropdown.Item>
+            <Nav.Link href="#action1">Peliculas</Nav.Link>
+            <Nav.Link href="#action2">Personajes</Nav.Link>
+            <NavDropdown title="Otros" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="#action3">Especies</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
-                Mangas
+                Vehiculos
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">
-                +18
+                Lugar
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Yo mero
-            </Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control

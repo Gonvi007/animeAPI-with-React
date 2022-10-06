@@ -4,42 +4,44 @@ import Card from 'react-bootstrap/Card';
 import Modal from 'react-bootstrap/Modal';
 import "./Anime.scss";
 
-const Anime = ({id, name, src, nameOriginal, anio}) =>{
+const Anime = ({id, name, src, nameOriginal, anio, director, description}) =>{
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
     return (
-        <Card key={id} style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={src} />
-        <Card.Body>
-          <Card.Title>{name}</Card.Title>
-          <Card.Text>
-            {nameOriginal}
-          </Card.Text>
-          <Card.Text>
-            Año:{anio}
-          </Card.Text>
-          <Button variant="primary">Ver más!</Button>
-          <Button variant="primary" onClick={handleShow}>
-            Launch demo modal
-          </Button>
-        </Card.Body>
-        <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
-      </Card>
+        <div className="container">
+          <Card key={id} style={{ width: '18rem' }}>
+          <Card.Img variant="top" src={src} />
+          <Card.Body>
+            <Card.Title> Titulo: {name}</Card.Title>
+            <Card.Text>
+              Titulo Original: {nameOriginal}
+            </Card.Text>
+            <Card.Text>
+              Año: {anio}
+            </Card.Text>
+            <Card.Text>
+              Director: {director}
+            </Card.Text>
+            <Button variant="primary" onClick={handleShow}>
+              Descripción
+            </Button>
+          </Card.Body>
+          <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Description</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>{description}</Modal.Body>
+          <Card.Img variant="top" src={src} />
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+          </Modal.Footer>
+                </Modal>
+                </Card>
+        </div>
 
 
       
