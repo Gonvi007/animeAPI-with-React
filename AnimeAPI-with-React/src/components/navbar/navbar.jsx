@@ -13,7 +13,7 @@ function NavBar() {
     <div className="NavBar">
 <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Brand href="#"><img src="../assets/made in abyss 01.jpg"></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -21,20 +21,20 @@ function NavBar() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+            <Nav.Link href="#action1">Animes</Nav.Link>
+            <Nav.Link href="#action2">Mangas</Nav.Link>
+            <NavDropdown title="Top" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="#action3">Animes</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
-                Another action
+                Mangas
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">
-                Something else here
+                +18
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#" disabled>
-              Link
+              Yo mero
             </Nav.Link>
           </Nav>
           <Form className="d-flex">
@@ -53,4 +53,4 @@ function NavBar() {
   )
 }
 
-export default NavBar
+export {NavBar}
